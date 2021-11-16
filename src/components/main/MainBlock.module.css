@@ -1,0 +1,8 @@
+.main {
+    min-height: 580px;
+    display: flex;
+    flex: 1;
+    overflow-y: auto;
+    position: relative;
+    background: rgba(229, 229, 225, 0.3);
+}
