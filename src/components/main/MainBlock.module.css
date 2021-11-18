@@ -1,7 +1,24 @@
 .main {
     display: flex;
+    flex-direction: column;
     flex: 1;
     overflow-y: auto;
     position: relative;
     background: rgba(229, 229, 225, 0.3);
 }
+
+.main_header {
+    height: 40px;
+    width: 600px;
+    display: flex;
+    color: darkgrey;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.main_header_item {
+    width: 120px;
+    display: flex;
+    align-items: center;
+}
+

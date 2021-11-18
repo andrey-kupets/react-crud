@@ -1,0 +1,15 @@
+.users_wrapper {
+    height: 40px;
+    width: 600px;
+    display: flex;
+}
+
+.user_item {
+    width: 120px;
+    margin-bottom: 4px;
+    background: rgba(229, 229, 225, 0.3);
+    color: darkgrey;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
