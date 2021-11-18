@@ -23,11 +23,19 @@ export const MainBlock = () => {
   }, [dispatch, successMsg, error]);
 
   const onCreateClick = () => {
+    if (action) {
+      setAction(!action)
+    }
+
     setCreation(!creation);
     dispatch(setSuccessMsg(false));
   };
 
   const onActionClick = (id) => {
+    if (creation) {
+      setCreation(!creation);
+    }
+
     setAction(!action);
     dispatch(setOneUser(id));
   };
