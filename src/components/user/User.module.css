@@ -1,15 +1,22 @@
 .users_wrapper {
     height: 40px;
-    width: 600px;
+    width: 800px;
     display: flex;
+    color: #494949;
+    background: rgba(229, 229, 225, 0.3);
+    margin-left: 12px;
+}
+
+.users_wrapper:hover {
+    background: #a69e9e;
 }
 
 .user_item {
-    width: 120px;
+    width: 160px;
     margin-bottom: 4px;
-    background: rgba(229, 229, 225, 0.3);
-    color: darkgrey;
     font-size: 12px;
     display: flex;
     align-items: center;
+    padding-left: 6px;
 }
+

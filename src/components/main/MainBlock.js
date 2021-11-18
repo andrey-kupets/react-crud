@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { loadUsersData } from "../../redux/action-creators";
 import { Loading } from "../loading";
 import { User } from "../user";
+import { Error } from "../error";
+import { SuccessMsg } from "../success-msg";
 
 export const MainBlock = () => {
   const dispatch = useDispatch();
@@ -14,6 +16,11 @@ export const MainBlock = () => {
 
   return (
     <div className={styles.main}>
+      <div className={styles.main_messages}>
+        <Error/>
+        <SuccessMsg/>
+      </div>
+      <button className={styles.button__create}>Create</button>
       <div className={styles.main_header}>
         <div className={styles.main_header_item}>USERNAME</div>
         <div className={styles.main_header_item}>FIRST NAME</div>

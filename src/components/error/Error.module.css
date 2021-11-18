@@ -1,8 +1,13 @@
 .error_wrapper {
+    height: 32px;
     width: 200px;
-    background: #ec3939;
+    background: #ee2828;
     color: white;
     font-size: 12px;
     font-weight: bold;
     text-align: center;
+    border: solid;
+    border-radius: 6px;
+    margin: 12px 0 0 12px;
+    padding-top: 8px;
 }
