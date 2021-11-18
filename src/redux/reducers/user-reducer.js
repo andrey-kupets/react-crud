@@ -12,7 +12,7 @@ const reducer = (state = initialState, action) => {
 
     case SET_USERS: return { ...state, users: action.payload }
 
-    case SET_ONE_USER: return { ...state, user: action.payload };
+    case SET_ONE_USER: return { ...state, user: state.users.find(item => item._id === action.payload) };
 
     // case ADD_USER: return { ...state, users: state.users.push(action.payload) };
     //

@@ -1,0 +1,1 @@
+export const SET_SUCCESS_MSG = 'SET_SUCCESS_MSG';
