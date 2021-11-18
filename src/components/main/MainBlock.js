@@ -1,13 +1,16 @@
 import React, { useEffect } from "react";
 import styles from './MainBlock.module.css';
-import { userService } from "../../services/UserService";
+import { useDispatch, useSelector } from "react-redux";
+import { loadUsersData } from "../../redux/action-creators";
 
 export const MainBlock = () => {
-  useEffect(async () => {
-    const users = await userService.getUsers();
-    console.log(users);
+  const dispatch = useDispatch();
+  const { users } = useSelector(({ users }) => users)
+  useEffect( () => {
+    dispatch(loadUsersData());
   },[]);
 
+    console.log(users);
 
   return (
     <div className={styles.main}>
