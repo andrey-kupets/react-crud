@@ -1,6 +1,6 @@
 .creation_wrapper {
     height: 500px;
-    width: 400px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -18,5 +18,15 @@
     color: white;
     border: solid 2px white;
     border-radius: 6px;
-    margin: 12px 0 0 40px;
+    margin-top: 12px;
+}
+
+.buttons_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input__size {
+    width: 280px;
 }

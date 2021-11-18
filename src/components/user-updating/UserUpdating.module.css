@@ -1,6 +1,6 @@
 .action_wrapper {
     height: 500px;
-    width: 400px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -9,4 +9,34 @@
     font-size: 12px;
     font-weight: normal;
     color: #8a8888;
+}
+
+.button__delete {
+    height: 32px;
+    width: 100px;
+    background: #f13131;
+    color: white;
+    border: solid 2px white;
+    border-radius: 6px;
+    margin-top: 12px;
+}
+
+.button__save {
+    height: 32px;
+    width: 100px;
+    background: #00a6ff;
+    color: white;
+    border: solid 2px white;
+    border-radius: 6px;
+    margin-top: 12px;
+}
+
+.buttons_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input__size {
+    width: 280px;
 }

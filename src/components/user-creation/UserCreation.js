@@ -54,6 +54,7 @@ export const UserCreation = ({statusForm}) => {
     <div className={styles.creation_wrapper}>
       <label>Username<br/>
         <input
+          className={styles.input__size}
           name='username'
           value={userData.username}
           onChange={inputData}
@@ -62,6 +63,7 @@ export const UserCreation = ({statusForm}) => {
       </label>
       <label>First name<br/>
         <input
+          className={styles.input__size}
           name='first_name'
           value={userData.first_name}
           onChange={inputData}
@@ -70,6 +72,7 @@ export const UserCreation = ({statusForm}) => {
       </label>
       <label>Last name<br/>
         <input
+          className={styles.input__size}
           name='last_name'
           value={userData.last_name}
           onChange={inputData}
@@ -78,6 +81,7 @@ export const UserCreation = ({statusForm}) => {
       </label>
       <label>Email<br/>
         <input
+          className={styles.input__size}
           name='email'
           value={userData.email}
           onChange={inputData}
@@ -86,6 +90,7 @@ export const UserCreation = ({statusForm}) => {
       </label>
       <label>Type<br/>
         <input
+          className={styles.input__size}
           name='user_type'
           value={userData.user_type}
           onChange={inputData}
@@ -94,13 +99,16 @@ export const UserCreation = ({statusForm}) => {
       </label>
       <label>Password<br/>
         <input
+          className={styles.input__size}
           name='password'
           value={userData.password}
           onChange={inputData}
           type="password"
         />
       </label>
-      <button className={styles.button__create} onClick={onCreateClick}>Create</button>
+      <div className={styles.buttons_wrapper}>
+        <button className={styles.button__create} onClick={onCreateClick}>Create</button>
+      </div>
     </div>
   )
 };

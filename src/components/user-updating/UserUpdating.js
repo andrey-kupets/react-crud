@@ -50,6 +50,7 @@ export const UserUpdating = ({statusForm}) => {
     <div className={styles.action_wrapper}>
       <label>Username<br/>
         <input
+          className={styles.input__size}
           name='username'
           value={userData.username}
           onChange={inputData}
@@ -58,6 +59,7 @@ export const UserUpdating = ({statusForm}) => {
       </label>
       <label>First name<br/>
         <input
+          className={styles.input__size}
           name='first_name'
           value={userData.first_name}
           onChange={inputData}
@@ -66,6 +68,7 @@ export const UserUpdating = ({statusForm}) => {
       </label>
       <label>Last name<br/>
         <input
+          className={styles.input__size}
           name='last_name'
           value={userData.last_name}
           onChange={inputData}
@@ -74,6 +77,7 @@ export const UserUpdating = ({statusForm}) => {
       </label>
       <label>Email<br/>
         <input
+          className={styles.input__size}
           name='email'
           value={userData.email}
           onChange={inputData}
@@ -82,6 +86,7 @@ export const UserUpdating = ({statusForm}) => {
       </label>
       <label>Type<br/>
         <input
+          className={styles.input__size}
           name='user_type'
           value={userData.user_type}
           onChange={inputData}
@@ -90,14 +95,25 @@ export const UserUpdating = ({statusForm}) => {
       </label>
       <label>Password<br/>
         <input
+          className={styles.input__size}
           name='password'
           value={userData.password}
           onChange={inputData}
           type="password"
         />
       </label>
-      <button onClick={onDeleteClick}>Delete</button>
-      <button onClick={onSaveClick}>Save</button>
+      <div className={styles.buttons_wrapper}>
+        <button
+          onClick={onDeleteClick}
+          className={styles.button__delete}
+        >Delete
+        </button>
+        <button
+          onClick={onSaveClick}
+          className={styles.button__save}
+        >Save
+        </button>
+      </div>
     </div>
   )
 };
