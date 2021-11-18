@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from "react";
 import styles from './MainBlock.module.css';
 import { useDispatch, useSelector } from "react-redux";
-import { loadUsersData, setSuccessMsg } from "../../redux/action-creators";
+import { loadUsersData, setOneUser, setSuccessMsg } from "../../redux/action-creators";
 import { Loading } from "../loading";
 import { User } from "../user";
 import { Error } from "../error";
 import { SuccessMsg } from "../success-msg";
 import { UserCreation } from "../user-creation/UserCreation";
+import { UserUpdating } from "../user-updating";
 
 export const MainBlock = () => {
   const dispatch = useDispatch();
-  const { loading, users, successMsg, error } = useSelector(({ users, successMsg, error }) => ({ ...users, ...successMsg, ...error }))
+  const { loading, users, successMsg, error } = useSelector(
+    ({ users, successMsg, error}) => ({ ...users, ...successMsg, ...error})
+  );
 
   const [creation, setCreation] = useState(null);
   const [action, setAction] = useState(null);
-  console.log(creation)
 
   useEffect(() => {
     dispatch(loadUsersData());
@@ -25,8 +27,9 @@ export const MainBlock = () => {
     dispatch(setSuccessMsg(false));
   };
 
-  const onActionClick = () => {
-    setAction(true);
+  const onActionClick = (id) => {
+    setAction(!action);
+    dispatch(setOneUser(id));
   };
 
   return (
@@ -43,11 +46,11 @@ export const MainBlock = () => {
         <div className={styles.main_header_item}>EMAIL</div>
         <div className={styles.main_header_item}>TYPE</div>
       {creation && <UserCreation statusForm={setCreation}/>}
-      {/*{action && <UserCreation/>}*/}
+      {action && <UserUpdating statusForm={setAction} />}
       </div>
       {(loading || loading === null)
         ? <Loading/>
-        : users.map((user) => <User key={user._id} {...user}/>)
+        : users.map((user) => <User key={user._id} {...user} displayForm={onActionClick}/>)
       }
     </div>
   )

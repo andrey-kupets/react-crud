@@ -24,5 +24,6 @@ const loadUsersData = () => async (dispatch, getState) => {
 
 export {
   setLoading,
+  setOneUser,
   loadUsersData
 }

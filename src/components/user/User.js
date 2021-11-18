@@ -3,15 +3,17 @@ import styles from'./User.module.css';
 
 export const User = (props) => {
   const {
+    _id,
     username,
     first_name,
     last_name,
     email,
-    user_type
+    user_type,
+    displayForm
   } = props;
 
   return (
-    <div className={styles.users_wrapper}>
+    <div onClick={() => displayForm(_id)} className={styles.users_wrapper}>
       <div className={styles.user_item}>{username}</div>
       <div className={styles.user_item}>{first_name}</div>
       <div className={styles.user_item}>{last_name}</div>
